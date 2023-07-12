@@ -13,4 +13,4 @@ const sequelizeDatabase = new Sequelize(DATABASE_URL);
 const foodModel = food(sequelizeDatabase, DataTypes);
 // const clothesModel = order(sequelizeDatabase, DataTypes)
 
-module.exports = { sequelizeDatabase, foodModel };
+module.exports = { sequelizeDatabase, foodModel, DataTypes };
