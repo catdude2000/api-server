@@ -1,7 +1,7 @@
 'use strict';
 
 const { Sequelize, DataTypes } = require('sequelize');
-const food = require('./food');
+const food = require('./food.js');
 
 //will make dynamic for testing enviornment
 const DATABASE_URL = process.env.NODE_ENV === 'test' ? 'sqlite::memory:' : process.env.DATABASE_URL; //double colon might not work
