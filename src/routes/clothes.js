@@ -1,26 +1,32 @@
 'use strict';
 
 const express = require('express');
-const { clothesModel } = require('../models')
+const { clothesModel } = require('../models');
 const router = express.Router();
 
 router.get('/cItem', async (req, res, next) => {
-  const orders = await clothesModel.findAll90;
+  const orders = await clothesModel.findAll();
   res.status(200).send(orders);
 });
 
-router.post('/order', async (req, res, next) => {
-  const newCItem = await clothesModel
+router.get('/cItem/:id', async (req, res, next) => {
+  const article = await clothesModel.findAll({where: {id: req.params.id}});
+  res.status(200).send(article);
 });
 
-router.delete('/order/:id', async (req, res, next) => {
-  try {
+router.post('/cItem', async (req, res, next) => {
+  const newCItem = await clothesModel.create(req.body);
+  res.status(200).send(newCItem);
+});
 
-  }catch(e){
-    next(e);
-  }
+router.delete('/cItem/:id', async (req, res, next) => {
+  // try {
+
+  // }catch(e){
+  //   next(e);
+  // }
   const deleteCItem = await clothesModel.findByPk(req.params.id);  //findbypk or id? my choice?
-  await
-})
+  
+});
 
 module.exports = router;
