@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/catdude2000/api-server-old.git"
+    "url": "https://github.com/catdude2000/api-server.git"
   },
   "author": "Mike Pace",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/catdude2000/api-server-old/issues"
+    "url": "https://github.com/catdude2000/api-server/issues"
   },
-  "homepage": "https://github.com/catdude2000/api-server-old#readme",
+  "homepage": "https://github.com/catdude2000/api-server#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
