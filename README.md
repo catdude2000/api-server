@@ -8,10 +8,10 @@ API Server with SQL and Postgres
 
 ### Links and Resources
 
--[Repo](https://github.com/catdude2000/api-server)
--[Render-Deploy](https://api-server-basic.onrender.com/)
--[My-PR-for-Emily](https://github.com/greasonek/api-server/pull/3)
--[Emily's-PR-for-me](https://github.com/catdude2000/api-server/pull/4)
+-[Repo](https://github.com/catdude2000/api-server)  
+-[Render Deploy](https://api-server-basic.onrender.com/)  
+-[My PR for Emily](https://github.com/greasonek/api-server/pull/3)  
+-[Emily's PR for me](https://github.com/catdude2000/api-server/pull/4)  
 
 ### Collaborators: Emily Greason
 
@@ -19,16 +19,16 @@ API Server with SQL and Postgres
 
 #### .env requirements (where applicable)
 
-port variable exists within the env sample
+port variable exists within the env sample  
 PORT - 3000
 
 #### Running the app
 
-clone repo
-`npm i`
-`npm start`
+clone repo  
+`npm i`  
+`npm start`  
 
-Endpoint: `/`
+Endpoint: `/`  
 Returns Object
 
 ```javascript
@@ -50,6 +50,6 @@ Lint Tests: npm run lint
 
 #### Lab 04-Modeling Notes
 
-Was partnered with Emily Greason for peer review.
+Was partnered with Emily Greason for peer review.  
 Takeaway:  I need Middleware and tests
 Links above in links section
