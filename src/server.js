@@ -6,7 +6,6 @@ const handle500 = require('./error-handlers/500');
 const handle404 = require('./error-handlers/404');
 const foodRouter = require('./routes/food');
 const clothesRouter = require('./routes/clothes');
-
 const app = express();
 
 app.use(cors());
@@ -20,7 +19,12 @@ app.get('/', (req, res, next) => {
 
 app.use('*', handle404);
 app.use(handle500);
+//bring in the other routes:
+//app.use(clothes);
+//app.use(food);
+//app.use(foodyClothes);
 
+// start function that will be used by the index
 const start = (port) => app.listen (port, () => console.log('listening on port:', port));
 
 module.exports = { start, app };

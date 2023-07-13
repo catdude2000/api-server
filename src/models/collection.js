@@ -1,10 +1,13 @@
 'use strict';
 
+
+// passing in the model/schema
 class Collection {
   constructor(model) {
     this.model = model;
   }
 
+  // CREATE route
   async create(jsonObj) {
     try {
       let record = await this.model.create(jsonObj);
@@ -14,6 +17,8 @@ class Collection {
       return e;
     }
   }
+
+  // GET route
   async read(id, options = {}) {
     let records = null;
     try {
@@ -21,7 +26,7 @@ class Collection {
         options.where = { id: id };
         records = await this.model.findOne(options);
 
-      } else records = await this.model.findAll();
+      } else records = await this.model.findAll();//pass options into the findAll funciton
       return records;
     } catch (e) {
       console.error(`error when reading data for model: ${this.model.name}`);
@@ -29,6 +34,7 @@ class Collection {
     }
   }
 
+  // UPDATE route
   async update(id, jsonObj) {
     try {
       if (!id) {
@@ -44,6 +50,8 @@ class Collection {
     }
   }
 
+
+  // DELETE route
   async delete(id) {
     try {
       if (!id)
