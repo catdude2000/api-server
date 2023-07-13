@@ -1,5 +1,7 @@
 'use strict';
 
+// establishing the model/schema for the food model
+
 module.exports = (sequelizeDatabase, DataTypes) => {
   return sequelizeDatabase.define('food', {
     name: {
