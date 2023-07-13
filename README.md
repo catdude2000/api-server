@@ -9,6 +9,7 @@ API Server with SQL and Postgres
 ### Links and Resources
 
 -[Repo](https://github.com/catdude2000/api-server)
+-[Render-Deploy](https://api-server-basic.onrender.com/)
 -[My-PR-for-Emily](https://github.com/greasonek/api-server/pull/3)
 -[Emily's-PR-for-me](https://github.com/catdude2000/api-server/pull/4)
 
@@ -46,3 +47,9 @@ Lint Tests: npm run lint
 (Created with Figma)
 
 ![UML]()
+
+#### Lab 04-Modeling Notes
+
+Was partnered with Emily Greason for peer review.
+Takeaway:  I need Middleware and tests
+Links above in links section
