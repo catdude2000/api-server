@@ -19,14 +19,14 @@ router.post('/cItem', async (req, res, next) => {
   res.status(200).send(newCItem);
 });
 
-router.delete('/cItem/:id', async (req, res, next) => {
-  // try {
+router.put('cItem/:id', async (req, res, next) => {
+  const updateCItem = await clothesModel.findAll({where: {id: req.params.id}});
+  res.status(200).send(updateCItem);
+});
 
-  // }catch(e){
-  //   next(e);
-  // }
-  const deleteCItem = await clothesModel.findByPk(req.params.id);  //findbypk or id? my choice?
-  
+router.delete('/cItem/:id', async (req, res, next) => {
+  const deleteCItem = await clothesModel.destroy({ where: {id: req.params.id}});  //findbypk or id? my choice?
+  res.status(204).json(deleteCItem);
 });
 
 module.exports = router;
