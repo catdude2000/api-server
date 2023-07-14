@@ -4,10 +4,10 @@ const supertest = require('supertest');
 const { server } = require('../src/server');
 const mockRequest = supertest(server);
 const { dbInstance } = require('../src/models/index');
-const { DESCRIBE } = require('sequelize/types/query-types');
-const { INET } = require('sequelize');
+const { describe } = require('sequelize/types/query-types');
 
-DESCRIBE('web server', () => {
+
+describe('web server', () => {
   beforeAll(async () => {
     await dbInstance.sync();
   });
