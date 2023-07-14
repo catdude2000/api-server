@@ -21,7 +21,8 @@ router.post('/food', async (req, res, next) => {
 });
 
 router.put('/food/:id', async (req, res, next) => {
-  let updatedFood = await foodModel.findAll({where: {id: req.params.id}});
+  let retrievedFood = await foodModel.findOne({where: {id: req.params.id}});
+  let updatedFood = await retrievedFood.update(req.body);
   res.status(200).send(updatedFood);
 });
 
