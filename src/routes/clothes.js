@@ -19,9 +19,10 @@ router.post('/cItem', async (req, res, next) => {
   res.status(200).send(newCItem);
 });
 
-router.put('cItem/:id', async (req, res, next) => {
-  const updateCItem = await clothesModel.findOne({where: {id: req.params.id}});
-  res.status(200).send(updateCItem);
+router.put('/cItem/:id', async (req, res, next) => {
+  const retrievedCItem = await clothesModel.findOne({where: {id: req.params.id}});
+  let updatedCItem = await retrievedCItem.update(req.body);
+  res.status(200).send(updatedCItem);
 });
 
 router.delete('/cItem/:id', async (req, res, next) => {
