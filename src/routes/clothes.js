@@ -20,7 +20,7 @@ router.post('/cItem', async (req, res, next) => {
 });
 
 router.put('cItem/:id', async (req, res, next) => {
-  const updateCItem = await clothesModel.findAll({where: {id: req.params.id}});
+  const updateCItem = await clothesModel.findOne({where: {id: req.params.id}});
   res.status(200).send(updateCItem);
 });
 
