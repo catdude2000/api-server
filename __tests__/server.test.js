@@ -3,16 +3,16 @@
 const supertest = require('supertest');
 const { server } = require('../src/server');
 const mockRequest = supertest(server);
-const { dbInstance } = require('../src/models/index');
+const { dbConnection } = require('../src/models/index');
 // const { describe } = require('sequelize/types/query-types');
-
+//const get?
 
 describe('web server', () => {
   beforeAll(async () => {
-    await dbInstance.sync();
+    await dbConnection.sync();
   });
   afterAll(async () => {
-    await dbInstance.drop();
+    await dbConnection.drop();
   });
   it('should respond with a 404 on an invalid route', () => {
     return mockRequest.get('/food').then((results) => {
@@ -52,12 +52,12 @@ describe('web server', () => {
   });
 
   it('can update a record', async () => {
-    const data = { name: 'banana' };
+    const data = { name: 'eit' };
     const response = await mockRequest.put('/food/1').send(data);
     expect(response.status).toBe(200);
     expect(typeof response.body).toEqual('object');
     expect(response.body.id).toEqual(1);
-    expect(response.body.name).toEqual('banana');
+    expect(response.body.name).toEqual('eit');
   });
 
   it('can delete a record', async () => {
