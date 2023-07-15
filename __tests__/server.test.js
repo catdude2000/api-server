@@ -47,7 +47,7 @@ describe('web server', () => {
   it('can get a record', async () => {
     const response = await mockRequest.get('/food/1');
     expect(response.status).toBe(200);
-    expect(typeof response.body).toEqual('object');
+    expect(typeof response.body).toEqual('object/:id');
     expect(response.body.id).toEqual(1);
   });
 
